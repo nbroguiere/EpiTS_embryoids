@@ -1,0 +1,45 @@
+Number	celltype	
+0	SC_dp6	
+1	HB_dp1	
+2	HB_dp4	
+3	SC_dp6	
+4	SC_dp6	
+5	SC_dI4	"Not sure if it might be HB, a large part of the cluster is strikingly Hoxb9 neg, and not sure neurons or dp6 (best match if progenitor). Probably an in-between cluster. Between SC and HB and dI4 and dp6. "
+6	SC_pMN	
+7	SC_p0	
+8	HB_bMN	Branchial motor neurons Pla BMC neural development 2008
+9	SC_dp4	
+10	SC_pMN	Switch to progenitors
+11	SC_dI4	
+12	HB_dp3	
+13	SC_dp6	
+14	SC_MN	
+15	SC_p0	Actually progenitors
+16	SC_dI5	Cut in 2 - the cluster is half progenitor half neurons
+17	SC_dI6	
+18	SC_pMN	
+19	SC_dI2-3	
+20	HB_dI5	
+21	HB_p3	Precursors of branchial/visceral motor neurons (Jarrar 2015 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4412715/). Branchial motor neuron markers cf Pla BMC neural development 2008.
+22	HB_dI5	
+23	SC_p2	
+24	SC_p0	
+25	SC_MN	
+26	HB_dp1	
+27	SC_V1	
+28	SC_V0	
+29	SC_V2b	
+30	SC_dI5	
+31	SC_p0	Actually progenitors
+32	SC_pMN	
+33	SC_dp3	
+34	SC_dp4	
+35	HB_dI2-3	
+36	SC_V0	
+37	HB_dp2	
+38	HB_p3	Precursors of branchial/visceral motor neurons (Jarrar 2015 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4412715/). Branchial motor neuron markers cf Pla BMC neural development 2008.
+39	HB_dI5	
+40	HB_dI1	
+41	SC_V2a	Manual split
+42	SC_p1	Manual split
+43	SC_dp5	Manual split

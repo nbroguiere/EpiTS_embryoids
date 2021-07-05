@@ -1,0 +1,19 @@
+EpiblastAndNeuroepithelium	Epcam	Nanog	Otx2	Pou5f1	Pim2	Gbx2	Hes3	L1td1																																																																
+EarlyCaudal	Cdx2	Nkx1-2	Etv4	Sema3a	Fgf8	Sp5	Tcea3																																																																	
+FloorPlate	Nkx6-1	Nkx6-2	Shh	TCF15	Igfbp5	Nkx2-9	Ntn1	Prrx2	Selenop	Foxa1	Foxa2																																																													
+MidSC	Olig2	Nkx6-2																																																																						
+RoofPlate	Olig3	Pax3	Lmx1a	Wnt1	Wnt4	Msx1	Msx2	Msx3																																																																
+NeuralStemCellsEarly	Nes	Fabp7	Sox9	Tcf7l2	Ednrb	Wnt7a	Wnt7b	Dbx1	Dbx2	Dtx4	Fez1	Gm32061	Hes5	Pantr1	Pax6	Pax7																																																								
+NeuralStemCellsLate	Hes6	Dll1	Dll3	Mfng	Mfap4	Miat	Rgs16	Slc1a2	Spock2	Sstr2	St18	Hes6	Btbd17	Btg2	Gadd45g	Fam110a	Galnt18	Neurod4	Neurog1																																																					
+NeuralCrest	Sox10	Foxd3																																																																						
+MidBrain_HindBrain	En1	Fgf15	Hoxb1	Egr2	Crabp1	Cer1	Unc5c	Epha7	Ptn	Irx2	Lhx2	Sox1	Six3	Foxg1	Ascl1	Atoh1	Lhx1	Ascl1	Rspo3																																																					
+Anterior	Aldh1a2	Crabp1	Wnt1	Zic1	Zic2	Zic3	Zic4	Zic5																																																																
+SpinalCord_LatePosterior	Hoxaas3	Hoxa7	Hoxb3	Hoxb4	Hoxb5os	Hoxb7	Hoxb8	Hoxb9	Hoxc4	Hoxc6	Hoxc8	Hoxc9	Meox1																																																											
+Excitatory	Tlx1	Tlx3	Evx1	Evx2																																																																				
+Inhibitory	Lhx1	Lhx5	Lbx1	Ptf1a	Pax2	Lamp5	Pid1																																																																	
+Neurons1	Pax5	Pax2	Otp	Nrxn3	Nrth2	Lhx1	Lhx5	Lamp5	Nav2	Lbx1	Nxph4	Robo3	Sncb	Uncx	Lzts1																																																									
+Neurons2	Tfap2b	Tlx3	Lhx2	Nrn1	Lmx1b	Nxph4	En1	Pou4f1	Nav2	Prrxl1	Olig2	Lbx1	Eya2																																																											
+Neurons3	Isl1	Mcc	Ndufa4l2	Nkx6-1	Nrg1	Slit3	Robo2	Slc10a4	Slc18a3	Lhx3	Olig2	Lbx1																																																												
+Neurons4	Isl2	Isl1	Sema3d	Lhx4	Uxs2b	Mcc	Mnx1	Nrg1	Robo2	Slc10a4	Slc18a3	Slit2	Slit3																																																											
+Neurons5	Lhx4	Lhx5	Nav2	Nrxn3	Nxph4	Robo3	Sncb																																																																	
+Neurons	Nefl	Nefm	Myt1	Nav2	Kif5c	Klhl35	L1cam	Lhx1	Akap6	Lamp5	Lhx2	Tubb3	Akap6	Celf3	Chgb	Crmp1	Dcx	Srrm3	Srrm4	Dpysl3	Dpysl4	Dst	Dusp8	Ebf1	Ebf2	Ebf3	Lhx1os	Ina	Lhx4	Lmx1b	Map2	Mapt	Basp1	Bhlhe22			Elval3	Elavl4	Epha5	Evx1	Eya1	Eya2	Gap43	Gng3	Igfbpl1	Insm1	Isl1	Isl2	M11t11	Neurod1			Nhlh1	Nhlh2	Nkx6-1	Nrg1	Onecut2	Onecut3	Pcskln	Plk3	Prmt8	Rgmb	Rtn1	Scg3	Scn3a	Sncg	Scrt1	Scrt2	Snap91	Stmn2	Stmn3	Stmn4

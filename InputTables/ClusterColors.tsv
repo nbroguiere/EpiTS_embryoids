@@ -1,0 +1,40 @@
+color	celltype
+#f8e16c	Chorion
+#ffa303	Ectoplacental Cone
+#d3b942	Labyrinth progenitors
+#b58f34	Sinusoidal Trophoblast Giant Cell
+#d8992b	Parietal Trophoblast Giant Cell
+#e4bf12	Spongiotrophoblast
+#d5cead	ExE - Neural Doublets
+#474747	PGC
+#cdcdcd	Epiblast
+#45ebec	Caudal Neuroectoderm/NMP
+#86d0ec	Neural Plate
+#1aa6ff	Spinal Cord
+#29d99d	Floor Plate
+#609fd1	Roof Plate
+#427aa6	Spinal Cord Neural Stem Cells
+#e4ace3	Rostral Neuroectoderm
+#ff6efd	Midbrain/Hindbrain
+#bd9cff	Brain Neural Stem Cells
+#c051ff	Neurons
+#15f0c1	Neural Crest
+#918585	Primitive Streak
+#d9b2b2	Anterior Nascent Mesoderm
+#df8888	Cardiac Mesoderm
+#ff0000	Cardiomyocytes
+#ff5075	Endothelium
+#e1694c	Posterior Nascent Mesoderm
+#f7875b	Paraxial mesoderm
+#cc7752	Somitic Mesoderm
+#cc5252	Dermomyotome
+#c05468	Sclerotome
+#ee5151	Pharyngeal Mesoderm
+#bc9962	Posterior Lateral Mesoderm
+#8d6f5f	Intermediate Mesoderm
+#656025	Pronephros
+#cadebc	Anterior Primitive Streak
+#8ea67c	Definitive Endoderm
+#7ceb52	Gut
+#77f7a1	Foregut
+#217346	Notochord

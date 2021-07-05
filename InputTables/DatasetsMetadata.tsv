@@ -1,0 +1,17 @@
+Filename	Day	Replicate	Batch	Spikes	Epithelialized	Stage	Min.Genes	Min.Pt.Mito	Max.Pt.Mito	nCells	AvgCount
+0pc_D5_rep1	5	1	Jan-20	0	Control	Day5	2000	1.5	15	2450	26340
+0pc_D5_rep2	5	2	Oct-19	0	Control	Day5	2000	1.5	15		
+0pc_D6_rep1	6	1	Jan-20	0	Control	Day6	2000	1.5	15	2540	23916
+0pc_D6_rep2	6	2	Jun-20	0	Control	Day6	2000	1.5	15	4089	28983
+0pc_D7_rep1	7	1	Jan-20	0	Control	Day7	2000	1.5	15	4089	28983
+0pc_D7_rep2	7	2	Jun-20	0	Control	Day7	2000	1.5	15	5368	20223
+0pc_D8_rep1	8	1	Jun-20	0	Control	Day8	2000	1.5	15	2289	30772
+0pc_D8_rep2	8	2	Jun-20	0	Control	Day8	2000	1.5	15	3423	25569
+3pc_D5_rep1	5	1	Jan-20	0	Epithelialized	Day5	2000	1.5	15	2866	30073
+3pc_D5_rep2	5	2	Oct-19	0	Epithelialized	Day5	2000	1.5	15		
+3pc_D6_rep1	6	1	Jan-20	0	Epithelialized	Day6	2000	1.5	15	2390	34494
+3pc_D6_rep2	6	2	Jun-20	0	Epithelialized	Day6	2000	1.5	15	4370	31166
+3pc_D7_rep1	7	1	Jan-20	0	Epithelialized	Day7	2000	1.5	15	2400	37482
+3pc_D7_rep2	7	2	Jun-20	0	Epithelialized	Day7	2000	1.5	15	3310	34157
+3pc_D8_rep1	8	1	Jun-20	0	Epithelialized	Day8	2000	1.5	15	3188	29606
+3pc_D8_rep2	8	2	Jun-20	0	Epithelialized	Day8	2000	1.5	15	3684	26678
