@@ -16,17 +16,17 @@ library(DoubletFinder)
 library(readr)
 library(harmony)
 
-output_folder <- "C:/Users/nicki/Documents/PostDoc_LSCB/20-05-30_Mehmet_Brain_Gastruloids/20-07-16_Analysis1_mergeAllDatasets" # Same as in the preprocessing step. 
-data_folder <- "DataExport"
+analysis_folder <- "<your folder>" # Same as in the preprocessing step (i.e. contains InputTables, re-exported data etc). 
+data_subfolder <- "DataExport" # Subfolder in the analysis folder containing the re-exported data after step 1 (cleaned up, germ layers annotated).
 data_export_folder <- "DataExport_closeups"
-setwd(output_folder)
+setwd(analysis_folder)
 
-rawdata <- Read10X(data.dir = data_folder, gene.column = 1)
+rawdata <- Read10X(data.dir = data_subfolder, gene.column = 1)
 rawdata[1:10,1:4]
-metadata <- read.table(file = paste(data_folder,"metadata.tsv.gz",sep="/"), header = T, sep = "\t", row.names = 1)
+metadata <- read.table(file = paste(data_subfolder,"metadata.tsv.gz",sep="/"), header = T, sep = "\t", row.names = 1)
 head(metadata) #celltype is cluster number
 
-SO <- CreateSeuratObject(counts = rawdata, project = "Cardiac Gastruloids", meta.data = metadata)
+SO <- CreateSeuratObject(counts = rawdata, project = "Brain Gastruloids", meta.data = metadata)
 SO <- NormalizeData(object = SO, scale.factor = 10000)
 SO[["harmony"]] <- CreateDimReducObject(embeddings = as.matrix(metadata[,grep("harmony",colnames(metadata))]),key = "harmony_",assay = "RNA")
 SO[["umap"]] <- CreateDimReducObject(embeddings = as.matrix(metadata[,c("UMAP_1","UMAP_2")]),key = "UMAP_",assay = "RNA")
@@ -44,7 +44,7 @@ gene_list2 <- c("Six3","Otx2","Cdx2","Meox1","Gata6","Evx1","Fgf8","Cdh2","Cer1"
 gene_list3 <- c("Hesx1","Dmbx1","Tnnt2","Ryr2","Hoxaas3","Bex4","Bex1","Irx2","Meset","Id3","Ube2c","Akr1b3","Alyref","Irx2")
 gene_list4 <- c("Cer1","Pou5f1","Nes","Tubb3","Shh","Olig2","En1","Six3","Sox10","Otx2","Sox17","Spink1","Pax3","Pax6","Pax7","Irx3","Hoxb1","En1","Math1","Dbx2","Ngn1","Ngn2","Mash1","Olig3","Ascl1","Atoh1","Nkx6.1","Dbx1","Nkx2.2","Foxa2","Tcf7l2","Dmbx1","Hesx1","Gbx2")
 gene_list5 <- c("Egr2","Lamp5","Lhx1","Lhx5","Lbx1","Ptf1a","Pax2","Tlx1","Tlx3","Evx1","Evx2","Lmx1a")
-setwd(output_folder)
+setwd(analysis_folder)
 # Most variable genes
 gene_list_vg <- VariableFeatures(SO)
 # All Hox, Sox, Tbx, Pax genes
@@ -210,7 +210,7 @@ gene_list2 <- c("Six3","Otx2","Cdx2","Meox1","Gata6","Evx1","Fgf8","Cdh2","Cer1"
 gene_list3 <- c("Hesx1","Dmbx1","Tnnt2","Ryr2","Hoxaas3","Bex4","Bex1","Irx2","Meset","Id3","Ube2c","Akr1b3","Alyref","Irx2")
 gene_list4 <- c("Cer1","Pou5f1","Nes","Tubb3","Shh","Olig2","En1","Six3","Sox10","Otx2","Sox17","Spink1","Pax3","Pax6","Pax7","Irx3","Hoxb1","En1","Math1","Dbx2","Ngn1","Ngn2","Mash1","Olig3","Ascl1","Atoh1","Nkx6.1","Dbx1","Nkx2.2","Foxa2","Tcf7l2","Dmbx1","Hesx1","Gbx2")
 gene_list5 <- c("Egr2","Lamp5","Lhx1","Lhx5","Lbx1","Ptf1a","Pax2","Tlx1","Tlx3","Evx1","Evx2","Lmx1a")
-setwd(output_folder)
+setwd(analysis_folder)
 # Top PCA contributors
 gene_list_pca <- vector()
 for(i in dims.use.ecto){

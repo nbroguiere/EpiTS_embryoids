@@ -17,14 +17,13 @@ library(readr)
 library(harmony)
 
 ##### Data and output folders #####
-dataset_folder <- "D:/Raw_data_LSCB/scRNAseqMehmet/RawCounts" # Set to folder containing cellranger outputs for all datasets as subfolders
-output_folder <- "C:/Users/nicki/Documents/PostDoc_LSCB/20-05-30_Mehmet_Brain_Gastruloids/20-07-16_Analysis1_mergeAllDatasets" # Set to folder of the analysis, which initially only contains the InputTables subfolder, and then will contain also subfolders with exported graphs
-classifier_folder <- "C:/Users/nicki/Documents/PostDoc_LSCB/20-05-10_TrainScMapOnAtlas" # Set to folder containing the scmap classifier trained on in vivo atlas data.
+dataset_folder <- "<your directory>/RawCounts" # Set to folder containing cellranger outputs for all datasets as subfolders
+analysis_folder <- "<your directory>" # Set to folder of the analysis, which initially only contains the InputTables subfolder, and then will contain also subfolders with exported graphs
+classifier_folder <- "<your directory>/scmap_pijuansala_classifier" # Set to folder containing the scmap classifier trained on in vivo atlas data.
 Days_to_analyze <- c(5,6,7,8) # choose among 5,6,7,8
 Batches_to_analyze <- c(1,2) # choose among 1,2
 
-##### Data loading and QC - including a preliminary automated annotation transfer to be able to remove doublets #####
-setwd(dir = output_folder)
+setwd(dir = analysis_folder)
 datasets.all <- read.table(file = "InputTables/DatasetsMetadata.tsv", sep = "\t",header = TRUE, stringsAsFactors = F)
 datasets.all <- datasets.all[,1:(ncol(datasets.all)-2)]
 datasets.all
@@ -43,7 +42,7 @@ scmap_classifier <- readRDS(file = paste(classifier_folder,"scmap_classifier3_10
 ref_stages <- c("E6.5","E6.75","E7.0","E7.25","E7.5","E7.75","E8.0","E8.25","E8.5")
 
 # Create Seurat objects
-setwd(dir = output_folder)
+setwd(dir = analysis_folder)
 SO.list <- list()
 homotypic.proportion <- list()
 doublet_pct <- list()
@@ -308,7 +307,7 @@ gene_list1 <- c("Pitx1","Bmp4","Tubb3","Hand1","Hand2","Sox2","Eya1","Eya2","Six
 gene_list2 <- c("Six3","Otx2","Cdx2","Meox1","Gata6","Evx1","Fgf8","Cdh2","Cer1","Snai1","Snai2","Tcf15")
 gene_list3 <- c("Hesx1","Dmbx1","Tnnt2","Ryr2","Hoxaas3","Bex4","Bex1","Irx2","Meset","Id3","Ube2c","Akr1b3","Alyref","Irx2")
 gene_list4 <- c("Pou5f1","Nes","Tubb3","Shh","Olig2","En1","Six3","Sox10","Otx2","Sox17","Spink1","Pax3","Pax6","Pax7","Irx3","Hoxb1","En1","Math1","Dbx2","Ngn1","Ngn2","Mash1","Olig3","Ascl1","Atoh1","Nkx6.1","Dbx1","Nkx2.2","Foxa2","Tcf7l2","Dmbx1","Hesx1","Gbx2")
-setwd(output_folder)
+setwd(analysis_folder)
 gene_list <- unique(c(gene_list1,gene_list2,gene_list3,gene_list4))
 if(!dir.exists("GenePlots_All")){dir.create("GenePlots_All")}
 for(gene in intersect(gene_list,rownames(SO))){
@@ -334,7 +333,7 @@ DimPlot(SO,pt.size=1,label=T,label.size = 4,repel = T) + NoLegend()
 
 ##### Write down the preprocessed data in DataExport, use this as a starting point for further analysis ##### 
 # Note: need to cd to the DataExport folder and execute "gzip *" in the command line to compress all files, recommended. 
-setwd(output_folder)
+setwd(analysis_folder)
 tmp <- GetAssayData(object = SO,slot = "counts",assay = "RNA")
 if(!dir.exists("DataExport")){dir.create("DataExport")}
 write(colnames(tmp), file = "./DataExport/barcodes.tsv")

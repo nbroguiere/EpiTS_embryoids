@@ -1,12 +1,14 @@
 library(Seurat)
-setwd("C:/Users/nicki/Documents/PostDoc_LSCB/20-05-30_Mehmet_Brain_Gastruloids/20-07-16_Analysis1_mergeAllDatasets/DataExport_closeups")
+
+geo_data_folder <- "<Directory containing the GEO data>"
+input_tables_folder <- "<Location of InputTables>"
 
 # Data, metadata and custom colors reload
-rawdata <- Read10X(data.dir = getwd(), gene.column = 1)
+rawdata <- Read10X(data.dir = geo_data_folder, gene.column = 1)
 rawdata[1:5,1:5]
-metadata <-read.table(file = "metadata.tsv.gz", header = T, sep = "\t", row.names = 1)
+metadata <-read.table(file = paste0(geo_data_folder,"/metadata.tsv.gz"), header = T, sep = "\t", row.names = 1)
 head(metadata)
-colors.table <- read.table(file = "../InputTables/ClusterColors.tsv", sep="\t", header = T, comment.char = "", as.is = T)
+colors.table <- read.table(file = paste0(input_tables_folder,"/ClusterColors.tsv"), sep="\t", header = T, comment.char = "", as.is = T)
 colors.use_celltypes   <- setNames(colors.table$color,colors.table$celltype)
 colors.use_stages <- setNames(c('#5e5bf4','#f854ee','#f85554','#f8ea54'),c("Day5","Day6","Day7","Day8"))
 colors.use_replicates <- c("#eed239","#7070fc")
